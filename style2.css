@@ -1,0 +1,158 @@
+html {
+			/* feel free to delete this if you just want the normal cursor! */
+			cursor: cell;
+		}
+
+		
+
+		#wrapper-index {
+			/* the notebook's cover */
+			background:url(websiteDec/backchrounds/background2.png);
+            background-size: 30px;
+			position: relative;
+			margin: auto;
+			margin-bottom: 35px;
+			width: 708px;
+			border-radius: 20px;
+ border: 20px solid transparent;border-image: url('websiteDec/decorations/whitelace.png') 30 round
+
+
+		}
+
+		
+
+		/* PAGES CSS */
+
+		.paper {
+			/*the CSS of both "pages" boxes. you can choose the look of ALL pages here */
+			background: url(websiteDec/backchrounds/note1.png);
+			z-index: 5;
+			position: relative;
+			display: inline-block;
+			box-sizing: border-box;
+			border: 1px solid rgb(167, 153, 153);
+			height: 550px;
+		}
+
+		.left {
+			width: 330px;
+			border-radius: 10px 0px 0px 10px;
+			overflow: hidden;		
+		}
+
+		.left-in {
+			/*			the main purpose of this class if so the scrollbar of left pages arent obscured by the bind spiral */
+			padding: 15px 10px 15px 25px;
+			height: 100%;
+			margin-right: 15px;
+			overflow: auto;
+		}
+
+		.right {
+			padding: 15px 25px;
+			width: 330px;
+			margin-left: -10px;
+			border-radius: 0px 10px 10px 0px;
+			overflow: auto;
+		}
+
+		/* you can also customize the look of SPECIFIC pages. take TAB 2 for example: */
+
+	
+		#tab2-p {
+			background: url(websiteDec/backchrounds/note1.png);
+			border-color: lightcoral;
+		}
+
+		/* tab buttons CSS stuff */
+
+		.tab {
+			/* for the ones on the left */
+			width: 590px;
+			height: 50px;
+			position: absolute;
+			transform: translate(-30%, -130%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: -90deg;
+			top: -10px;
+			left: -232px;
+		}
+
+		.tab2 {
+			/* for the ones on the right */
+			width: 590px;
+			height: 90px;
+			position: absolute;
+			transform: translate(-85%, -15%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: 90deg;
+			top: 590px;
+			right: -232px;
+		}
+
+		.tab button,
+		.tab2 button {
+			/*this is the look of the TABS! */
+			z-index: 1;
+			position: relative;
+			vertical-align: top;
+			/* when changing fonts it might mess with the tabs and make them dissappear... change the width when that happens */
+                        color: rgb(237, 235, 207);
+
+			width: 50px;
+			margin: 0px 3px;
+			padding: 10px 0px 30px 0px;
+			/* inherits the font-family from the ones in the body */
+			
+			transition-duration: 0.5s;
+			top: 10px;
+			border-radius: 10px 10px 0 0;
+			border: 1px solid rgb(40, 34, 37);
+		}
+
+		/* here you can change the color of each individual TAB button*/
+		.tab1-b {
+			background: #c0a8a0;
+		}
+
+		.tab2-b {
+			background: #a4918f;
+		}
+
+		.tab3-b {
+			background: #504141;
+		}
+
+		.tab4-b {
+			background: #2c2623;
+		}
+
+		.tab5-b {
+			background: #C0A0B2;
+		}
+        
+		.tab6-b {
+			background: #af8a9f;
+		}
+.tab7-b {
+			background: #89427d;
+		}
+		/* hover effect of TAB*/
+		.tab button:hover,
+		.tab2 button:hover {
+			top: 0px;
+			cursor: -webkit-grab;
+			cursor: grab;
+		}
+
+		/* selected TAB effect aka when its focused */
+		.tab button.active,
+		.tab2 button.active {
+			top: 0px;
+			cursor: -webkit-grabbing;
+			cursor: grabbing;
+			box-shadow: 1px 1px 20px 1px grey;
+			outline: none;
+		}
+
+	

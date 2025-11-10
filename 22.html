@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Aetheria_world</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Special+Elite&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .dancing-script {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+
+        .Updatebox {
+            width: 140px;
+            height: 150px;
+            border: 1px solid #333;
+            padding: 10px;
+            overflow-y: scroll;
+            margin-left: 20px;
+
+            /* thin scrollbar styling */
+            scrollbar-width: thin;
+            /* Firefox */
+            scrollbar-color: #555 #101010;
+            /* Firefox: thumb + track colors */
+
+        }
+
+        .copyright {
+
+            color: rgb(57, 55, 48);
+            /* fill color */
+            text-shadow:
+                2px 0 0 #9f9c87,
+                -2px 0 0 #9f9c87,
+                0 2px 0 #9f9c87,
+                0 -2px 0 #9f9c87,
+                1.5px 1.5px 0 #9f9c87,
+                -1.5px 1.5px 0 #9f9c87,
+                1.5px -1.5px 0 #9f9c87,
+                -1.5px -1.5px 0 #9f9c87;
+
+            font-weight: 900;
+        }
+
+        /* For WebKit browsers (Chrome, Edge, Safari) */
+        .Updatebox::-webkit-scrollbar {
+            width: 4px;
+            /* very thin scrollbar */
+        }
+
+        .Updatebox::-webkit-scrollbar-thumb {
+            background-color: #555;
+            /* scrollbar thumb color */
+            border-radius: 4px;
+            /* rounded edges */
+        }
+
+        .Updatebox::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            /* track color */
+        }
+
+        .hover-word:hover {
+            color: rgb(204, 208, 175);
+        }
+
+        .hover-word {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: #c9ac6b;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        /* Hide the star initially */
+        .hover-word .fa-star {
+            position: absolute;
+            top: -1em;
+            /* position star above */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            color: #c9ac6b;
+            font-size: 0.8em;
+        }
+
+        /* Show and slightly move the star up on hover */
+        .hover-word:hover .fa-star {
+            opacity: 1;
+            transform: translate(-50%, -3px);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .ppp {
+            color: rgb(215, 105, 171);
+            text-decoration: underline;
+        }
+
+        .special-elite-regular {
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            /* space between each icon-text pair */
+            align-items: center;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            /* vertically centers text beside image */
+            gap: 20px;
+            /* space between image and text */
+        }
+
+
+        .item p {
+            font-style: italic;
+            font-size: 15px;
+            color: #8c7239;
+
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: #2c282b;
+            color: #c9ac6b;
+            text-align: center;
+            border-radius: 6px;
+            font-family: cursive;
+            padding: 6px 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 200%;
+            /* position above image */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body
+    style="background-attachment: fixed; background-image: url('websiteDec/backchrounds/background.png'); background-size:250px; color: #ffffff; margin: 0;">
+
+    <center>
+
+
+    </center>
+    <!-- main content -->
+    <tbody>
+        <tr>
+            <td>
+                <table width="1040" cellspacing="15" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+
+
+                            <td valign="top" align="left">
+                                <!-- start -->
+                                <table style="border-collapse: collapse; width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <!-- start -->
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div
+                                                style="background-image: url(websiteDec/backchrounds/background2.png);background-size: 50px; width: 100.3%; height: 120px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+
+                                                <div style="display: flex; justify-content: center;">
+                                                    <div style="margin-top: 50px;">
+                                                        <a href="about.html">
+                                                            <span class="hover-word lobster-regular">About <i
+                                                                    class="fa-solid fa-star"></i></span>
+
+                                                        </a>
+                                                        <a href="characters.html">
+                                                            <span class="hover-word lobster-regular">Characters <i
+                                                                    class="fa-solid fa-star"></i></span>
+                                                        </a>
+                                                    </div>
+
+                                                    <a href="index.html">
+                                                        <img style="margin-top: -70px;" height="170px"
+                                                            src="websiteDec/titles/mainheader.png" alt="">
+                                                    </a>
+
+                                                    <div style="margin-top: 50px;">
+                                                        <a href="Stories.html">
+                                                            <span class="hover-word lobster-regular">Stories <i
+                                                                    class="fa-solid fa-star"></i></span>
+                                                        </a>
+                                                        <a href="Portfolio.html">
+                                                            <span class="hover-word lobster-regular">Portfolio <i
+                                                                    class="fa-solid fa-star"></i></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <!-- Black box -->
+                                            <td valign="top" align="left"
+                                                style="background-image: url(websiteDec/backchrounds/sidebg.png); background-size: 300px; color:#EAE5D3; width: 10%; height: 100px; text-align: center; position: relative; top: -2px;">
+
+
+
+                                                <img height="200px" src="websiteDec/decorations/sidepic.png" alt="">
+
+                                                <a href=""><img height="70px"
+                                                        src="websiteDec/clickables/socials/update.png" alt=""></a>
+
+                                                <div class="Updatebox">
+
+                                                    <!-- start -->
+                                                     <!-- start -->
+                                                    <img src="gifs/new.gif" alt="">
+                                                    <small>Portraits:<br> 
+                                                        <img height="50px" src="Icons/namyo.png" alt="">
+                                                        <img height="50px" src="Icons/passion.png" alt="">
+                                                        <br>
+                                                        <img height="50px" src="Icons/allhail.png" alt="">
+                                                        <img height="50px" src="Icons/muertoz.png" alt="">
+                                                        <br>
+                                                        <img height="50px" src="Icons/avron.png" alt="">
+                                                        <br>
+                                                    </small>
+                                                    <br><br>
+
+                                                    <img src="gifs/new.gif" alt="">
+                                                    <small>Portraits:<br> wings added</small>
+                                                    <br><br>
+
+                                                    <!-- end -->
+
+                                                    <!-- end -->
+                                                     <!-- start -->
+                                                    <img src="gifs/new.gif" alt="">
+                                                    <small>Attic:<br> Updated</small>
+                                                    <br>
+                                                    <!-- end -->
+
+                                                </div>
+                                                <br>
+                                                <a href="TheAttic.html"><img height="90px"
+                                                        src="websiteDec/clickables/socials/gravehouse.png" alt=""></a>
+                                                <a href="https://aetheria.straw.page"><img height="120px"
+                                                        src="websiteDec/clickables/socials/strawpage.png" alt=""></a>
+
+                                                <a href="https://x.com/Aetheria_world"><img height="120px"
+                                                        src="websiteDec/clickables/socials/twitter.png" alt=""></a>
+
+                                            </td>
+                                            <!-- end black -->
+
+
+
+
+
+
+
+
+
+                                            <!-- Main box -->
+
+                                            <td
+                                                style="background: #EAE5D3; color: #19191D; width: 80%; height: 100px; outline: #EAE5D3 4px solid; border: 4px #333 dashed;">
+                                                <!-- content box -->
+
+                                                <div>
+                                                    <img style="position: relative; top: -2px;" height="72px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+                                                    <img style="margin-left: -4px;" height="73px"
+                                                        src="websiteDec/decorations/lacetop.png" alt="">
+
+                                                </div>
+
+
+                                                <!-- text -->
+                                                <div style="margin: auto; text-align: center;">
+                                                    <br>
+                                                    <br>
+                                                    <small style="font-size: 20px; color: #8c7239; font-family: ;"> <b>
+                                                            <i class="fa-solid fa-dove"></i>
+                                                            <em>LOG #22: Avron</em></b></small>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <img height="50px" src="websiteDec/decorations/line.png" alt="">
+
+
+                                                    <!-- levelup, write here, main contents -->
+                                                    <div>
+
+
+                                                        <!-- levelup, write here, main contents -->
+                                                        <div class="container">
+
+                                                            <div class="item">
+                                                                <img height="590px" src="portraits/Hozier.png"
+                                                                    alt="Icon 1">
+                                                                <p style="width: 300px;">
+                                                                    ╰┈➤ <b>Biography</b>
+                                                                    <br>
+                                                                    <br>
+                                                                    <small>
+                                                                        Avron is one of the four continental dragons
+                                                                        located in the north. They are serious but
+                                                                        soft-spoken, able to sing hymns and tell
+                                                                        mysteries, stories, legends, and all kinds of
+                                                                        myths about different creatures. It is said that
+                                                                        their lifespan reaches back to the downfall of
+                                                                        humanity, and they know a thing or two about
+                                                                        those times from when they were a young reptile.
+                                                                        <br>
+                                                                        <br>
+                                                                        <span style="color: #bd940a;">
+                                                                            loves the winter cold
+                                                                        </span>
+                                                                    </small>
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                    ╰┈➤ <b>Biological Info</b>
+                                                                    <br>
+
+                                                                    <img style="border-radius: 10px; margin-left: 30px;"
+                                                                        height="20px" src="flags/pansexual.png" alt="">
+                                                                    <img style="border-radius: 10px;" height="20px"
+                                                                        src="flags/NonBinary.png" alt="">
+                                                                    <a href="articles.html" class="tooltip"><img
+                                                                            height="20px"
+                                                                            src="manualitems/secondclassangel.png"
+                                                                            alt=""><span class="tooltiptext">✦ Second
+                                                                            Class Angel </span></a>
+                                                                    <br>
+                                                                    <br>
+                                                                    He/They
+
+                                                                    <br>
+                                                                    <br>
+                                                                    ╰┈➤ <b>Bonds</b>
+                                                                    <br>
+                                                                    <a href=""><img style="" height="70px"
+                                                                            src="Icons/template.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/questionable.png" alt="">
+                                                                    <br>
+                                                                    <a href=""><img height="70px"
+                                                                            src="Icons/template.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/questionable.png" alt="">
+                                                                    <br>
+                                                                    <a href=""><img height="70px"
+                                                                            src="Icons/template.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/questionable.png" alt="">
+                                                                </p>
+
+                                                            </div>
+
+
+
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+
+                                                </div>
+                                                <br>
+
+                                                <!-- text end -->
+                                                <div style="display: flex ; justify-content: center;">
+
+                                                </div>
+                                                <!-- content end -->
+
+
+
+
+
+
+
+
+
+                                            </td>
+
+
+
+                                            <!-- end white -->
+
+
+
+                                        </tr>
+
+                                    </tbody>
+                                    <!-- end -->
+                                </table>
+
+
+                                <!-- end -->
+                                <div class="footer" style="text-align: center;">
+                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="footer">
+                                                        <p style="text-align: left;">
+
+                                                            <span style="color:#B0A798;"><b>
+                                                                    <span class="copyright">© 2025 Aetheria. All rights
+                                                                        reserved. </span>
+
+
+                                                                    <img src="websiteDec/decorations/copyright.png"
+                                                                        alt="" height="150" /></b></span>
+                                                        </p>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+
+
+    <!-- endcontent -->
+
+
+
+
+
+
+    <script type="text/javascript">
+        // <![CDATA[
+        // Remove Bubble Cursor functionality
+        // The rest of the script can remain unaffected
+
+        function addLoadEvent(funky) {
+            var oldonload = window.onload;
+            if (typeof (oldonload) !== 'function') {
+                window.onload = funky;
+            } else {
+                window.onload = function () {
+                    if (oldonload) oldonload();
+                    funky();
+                };
+            }
+        }
+
+        addLoadEvent(function () {
+            set_scroll();
+            set_width();
+        });
+
+        // Adjust window size and scrolling position
+        window.onresize = set_width;
+        window.onscroll = set_scroll;
+
+        function set_width() {
+            var sw_min = 999999;
+            var sh_min = 999999;
+            if (document.documentElement && document.documentElement.clientWidth) {
+                if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+            }
+            if (typeof (self.innerWidth) === 'number' && self.innerWidth) {
+                if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+            }
+            if (document.body.clientWidth) {
+                if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
+                if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
+            }
+            if (sw_min === 999999 || sh_min === 999999) {
+                sw_min = 800;
+                sh_min = 600;
+            }
+            swide = sw_min;
+            shigh = sh_min;
+        }
+
+        function set_scroll() {
+            if (typeof (self.pageYOffset) === 'number') {
+                sdown = self.pageYOffset;
+                sleft = self.pageXOffset;
+            } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                sdown = document.body.scrollTop;
+                sleft = document.body.scrollLeft;
+            } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                sleft = document.documentElement.scrollLeft;
+                sdown = document.documentElement.scrollTop;
+            } else {
+                sdown = 0;
+                sleft = 0;
+            }
+        }
+
+        function createDiv(height, width) {
+            var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.height = height;
+            div.style.width = width;
+            div.style.overflow = "hidden";
+            div.style.backgroundColor = "transparent";
+            return div;
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>

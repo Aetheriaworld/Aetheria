@@ -1,0 +1,35 @@
+.paragraph{
+    color: #756774;
+    text-align: center;
+}
+.paragraph2{
+        font-size: small;
+color: #b49bb2;
+
+    text-align: center;
+}
+.paragraph3{
+        font-size: small;
+color: #004363;
+
+    text-align: center;
+}
+section{
+    text-align: center;
+}
+.l{
+    
+
+ 
+
+
+  border-width:12px;
+border-style:solid;
+border-image: url("https://i.imgur.com/Kh6qtcn.png") 11 fill round;
+  
+}
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
