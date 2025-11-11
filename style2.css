@@ -12,7 +12,7 @@ html {
 			position: relative;
 			margin: auto;
 			margin-bottom: 35px;
-			width: 708px;
+			width: 748px;
 			border-radius: 20px;
  border: 20px solid transparent;border-image: url('websiteDec/decorations/whitelace.png') 30 round
 
@@ -35,7 +35,7 @@ html {
 		}
 
 		.left {
-			width: 330px;
+			width: 370px;
 			border-radius: 10px 0px 0px 10px;
 			overflow: hidden;		
 		}
