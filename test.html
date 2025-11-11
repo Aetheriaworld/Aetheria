@@ -15,168 +15,144 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-.dancing-script {
-font-family: "Dancing Script", cursive;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal;
+ <style>
+        .dancing-script {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+
+        .Updatebox {
+            width: 140px;
+            height: 150px;
+            border: 1px solid #333;
+            padding: 10px;
+            overflow-y: scroll;
+            margin-left: 20px;
+
+            /* thin scrollbar styling */
+            scrollbar-width: thin;
+            /* Firefox */
+            scrollbar-color: #555 #101010;
+            /* Firefox: thumb + track colors */
+
+        }
+             .copyright {
+
+ color: rgb(57, 55, 48); /* fill color */
+  text-shadow:
+    2px 0 0 #9f9c87,
+   -2px 0 0  #9f9c87,
+    0 2px 0 #9f9c87,
+    0 -2px 0  #9f9c87,
+    1.5px 1.5px 0 #9f9c87,
+   -1.5px 1.5px 0 #9f9c87,
+    1.5px -1.5px 0  #9f9c87,
+   -1.5px -1.5px 0 #9f9c87; 
+   
+   font-weight: 900;
 }
 
-.Updatebox {
-width: 140px;
-height: 150px;
-border: 1px solid #333;
-padding: 10px;
-overflow-y: scroll;
-margin-left: 20px;
+        /* For WebKit browsers (Chrome, Edge, Safari) */
+        .Updatebox::-webkit-scrollbar {
+            width: 4px;
+            /* very thin scrollbar */
+        }
 
-/* thin scrollbar styling */
-scrollbar-width: thin;
-/* Firefox */
-scrollbar-color: #555 #101010;
-/* Firefox: thumb + track colors */
+        .Updatebox::-webkit-scrollbar-thumb {
+            background-color: #555;
+            /* scrollbar thumb color */
+            border-radius: 4px;
+            /* rounded edges */
+        }
 
-}
-.tooltip {
-position: relative;
-display: inline-block;
-}
+        .Updatebox::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            /* track color */
+        }
 
-.tooltip .tooltiptext {
-visibility: hidden;
-background-color: #2c282b;
-color: #c9ac6b;
-text-align: center;
-border-radius: 6px;
-font-family: cursive;
-padding: 4px 5px;
-position: absolute;
-z-index: 1;
-bottom: -50%; /* position above image */
-left: 50%;
-transform: translateX(-50%);
-font-size: 10px;
-white-space: nowrap;
-}
+        .hover-word:hover {
+            color: rgb(204, 208, 175);
+        }
 
-.tooltip:hover .tooltiptext {
-visibility: visible;
-opacity: 1;
-}
-    .copyright {
+        .hover-word {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: #c9ac6b;
+            text-decoration: none;
+            margin-left: 10px;
+        }
 
-color: rgb(57, 55, 48); /* fill color */
-text-shadow:
-2px 0 0 #9f9c87,
--2px 0 0  #9f9c87,
-0 2px 0 #9f9c87,
-0 -2px 0  #9f9c87,
-1.5px 1.5px 0 #9f9c87,
--1.5px 1.5px 0 #9f9c87,
-1.5px -1.5px 0  #9f9c87,
--1.5px -1.5px 0 #9f9c87; 
+        /* Hide the star initially */
+        .hover-word .fa-star {
+            position: absolute;
+            top: -1em;
+            /* position star above */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            color: #c9ac6b;
+            font-size: 0.8em;
+        }
 
-font-weight: 900;
-}
+        /* Show and slightly move the star up on hover */
+        .hover-word:hover .fa-star {
+            opacity: 1;
+            transform: translate(-50%, -3px);
+        }
 
-/* For WebKit browsers (Chrome, Edge, Safari) */
-.Updatebox::-webkit-scrollbar {
-width: 4px;
-/* very thin scrollbar */
-}
+        a {
+            text-decoration: none;
+        }
 
-.Updatebox::-webkit-scrollbar-thumb {
-background-color: #555;
-/* scrollbar thumb color */
-border-radius: 4px;
-/* rounded edges */
-}
+        body {
+            overflow-x: hidden;
+        }
 
-.Updatebox::-webkit-scrollbar-track {
-background: #1a1a1a;
-/* track color */
-}
-       .container {
-  display: flex;
-  flex-direction: column;
-  gap: 60px; /* space between each icon-text pair */
-  align-items: center;
-  margin-top: 50px;
-}
+        .ppp {
+            color: rgb(215, 105, 171);
+            text-decoration: underline;
+        }
 
-.item {
-  display: flex;
-  align-items: center; /* vertically centers text beside image */
-  gap: 20px; /* space between image and text */
-}
+        .special-elite-regular {
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-.item img {
-  height: 130px;
-}
+        .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-.item p {
-  font-style: italic;
-  font-size: 15px;
-              color: #8c7239;
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            /* space between each icon-text pair */
+            align-items: center;
+        }
 
-}
-.hover-word:hover {
-color: rgb(204, 208, 175);
-}
+        .item {
+            display: flex;
+            align-items: center;
+            /* vertically centers text beside image */
+            gap: 20px;
+            /* space between image and text */
+        }
 
-.hover-word {
-position: relative;
-display: inline-block;
-cursor: pointer;
-color: #c9ac6b;
-text-decoration: none;
-margin-left: 10px;
-}
 
-/* Hide the star initially */
-.hover-word .fa-star {
-position: absolute;
-top: -1em;
-/* position star above */
-left: 50%;
-transform: translateX(-50%);
-opacity: 0;
-color: #c9ac6b;
-font-size: 0.8em;
-}
+        .item p {
+            font-style: italic;
+            font-size: 15px;
+            color: #8c7239;
 
-/* Show and slightly move the star up on hover */
-.hover-word:hover .fa-star {
-opacity: 1;
-transform: translate(-50%, -3px);
-}
+        }
 
-a {
-text-decoration: none;
-}
-
-body {
-overflow-x: hidden;
-}
-
-.ppp {
-color: rgb(215, 105, 171);
-text-decoration: underline;
-}
-
-.special-elite-regular {
-font-family: "Special Elite", system-ui;
-font-weight: 400;
-font-style: normal;
-}
-
-.lobster-regular {
-font-family: "Lobster", sans-serif;
-font-weight: 400;
-font-style: normal;
-}
-.tooltip {
+        .tooltip {
             position: relative;
             display: inline-block;
         }
@@ -191,9 +167,9 @@ font-style: normal;
             padding: 6px 8px;
             position: absolute;
             z-index: 1;
-            bottom: 110%;
+            bottom: 200%;
             /* position above image */
-            left:15%;
+            left: 50%;
             transform: translateX(-50%);
             font-size: 13px;
             white-space: nowrap;
@@ -203,7 +179,7 @@ font-style: normal;
             visibility: visible;
             opacity: 1;
         }
-</style>
+    </style>
 
 </head>
 
@@ -373,50 +349,110 @@ style="background-attachment: fixed; background-image: url('websiteDec/backchrou
 
                                                             <section class="section">
                                                                  <!-- start -->
-
- <div style="margin: auto; text-align: center;">
+                                                                                                                 <!-- text -->
+                                                <div style="margin: auto; text-align: center;">
                                                     <br>
                                                     <br>
-                                                    <small style="font-size: 20px; color: rgb(140, 114, 57);"
-                                                        class="dancing-script"> <b> <i class="fa-solid fa-dove"></i>
-                                                            Stories</b></small>
+                                                    <small style="font-size: 20px; color: #8c7239; font-family: ;"
+                                                       > <b> <i class="fa-solid fa-dove"></i>
+                                                            <em>LOG 10: Passion</em></b></small>
+                                                    <br>
+                                                    <br>
                                                     <br>
                                                     <br>
                                                     <img height="50px" src="websiteDec/decorations/line.png" alt="">
 
-                                                   
+
+                                                    <!-- levelup, write here, main contents -->
+                                                    <div>
+
+
                                                         <!-- levelup, write here, main contents -->
                                                         <div class="container">
 
-                                                        <div class="item">
-                                                            <a href="articles.html"><img  src="websiteDec/clickables/webticks/Journal.png" alt="Icon 1"></a>
-                                                            <p>╰┈➤ World, species and culture logger</p>
+                                                            <div class="item">
+                                                                <img height="750px" src="portraits/passion.png"
+                                                                    alt="Icon 1">
+                                                                <p style="width: 300px;">
+                                                                    ╰┈➤ <b>Biography</b>
+                                                                    <br>
+                                                                    <br>
+                                                                    <small>
+                                                                        A scientist angel who once lost all hope and was
+                                                                        on the verge of corrosion. She was taken in by
+                                                                        Allhail, for which she remains immensely
+                                                                        grateful and fully devoted to Allhail’s vision.
+                                                                        She has dedicated her life to the Church,
+                                                                        cutting off her wings and breaking her halo in
+                                                                        an effort to perfect her form, akin to the
+                                                                        Vitruvian Man.
+
+                                                                        Within the Church, people admire her zealous
+                                                                        loyalty to their faith. She is currently working
+                                                                        on the Heaven’s Telescope, an invention meant to
+                                                                        determine the time of the Great Day of
+                                                                        Reckoning, when humans will return. However,
+                                                                        every attempt ends in failure, and Passion
+                                                                        tirelessly searches for what she is missing.
+                                                                        <br>
+                                                                        <br>
+                                                                        <span style="color: #bd940a;">
+                                                                            They stay overnight to work on their tech
+                                                                        </span>
+                                                                    </small>
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                    ╰┈➤ <b>Biological Info</b>
+                                                                    <br>
+
+                                                                    <img style="border-radius: 10px; margin-left: 30px;"
+                                                                        height="20px" src="flags/asexual.png" alt="">
+                                                                    <img style="border-radius: 10px;" height="20px"
+                                                                        src="flags/NonBinary.png" alt="">
+                                                                    <a href="articles.html" class="tooltip"><img
+                                                                            height="20px"
+                                                                            src="relationshipsIcon/questionable.png"
+                                                                            alt=""><span class="tooltiptext">✦
+                                                                            Questionable </span></a>
+                                                                    <br>
+                                                                    <br>
+                                                                    They/Them
+
+                                                                    <br>
+                                                                    <br>
+                                                                    ╰┈➤ <b>Bonds</b>
+                                                                    <br>
+                                                                    <a href="23.html"><img style="" height="70px"
+                                                                            src="Icons/allhail.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/friendship.png" alt="">
+                                                                    <br>
+                                                                    <a href=""><img height="70px"
+                                                                            src="Icons/template.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/questionable.png" alt="">
+                                                                    <br>
+                                                                    <a href=""><img height="70px"
+                                                                            src="Icons/template.png" alt=""></a>
+                                                                    ╰┈➤ <img height="20px"
+                                                                        src="relationshipsIcon/questionable.png" alt="">
+                                                                </p>
+
+                                                            </div>
+
+
+
                                                         </div>
 
-                                                        <div class="item">
-                                                            <a href="Pockerstrips.html"><img  src="websiteDec/clickables/webticks/Graphiccomics.png" alt="Icon 1"></a>
-                                                            <p>╰┈➤ Pocket Strips and Visual novels</p>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <a href="letters.html"><img style=""  src="websiteDec/clickables/webticks/letters.png" alt="Icon 1"></a>
-                                                            <p>╰┈➤ Letters sent from one another</p>
-                                                        </div>
-
-                                                        <div class="item tooltip">
-                                                            <a href=""><img  src="websiteDec/clickables/webticks/Map.png" alt="Icon 1"></a>
-                                                        <span style="color: #8c7239;">╰┈➤ Maps, find your way around</span>
-                                                            <span class="tooltiptext">✦ Coming soon/Not Out yet </span>
-                                                        </div>
-
-</div>
 
 
-                                                    
-                                                 
-                                                   
 
+
+                                                    </div>
                                                 </div>
+                                                   
 
                                                               <!-- end -->
                                                                        </section>            
