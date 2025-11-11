@@ -2,298 +2,319 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Aetheria_world</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Special+Elite&display=swap"
-        rel="stylesheet">
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aetheria_world</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Henny+Penny&family=Lobster&display=swap" rel="stylesheet">
 
-    <style>
-        .dancing-script {
-            font-family: "Dancing Script", cursive;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-        }
-        .linkhover:hover{
-background-color: yellow;        }
-        .linkhover{
-            color: #ff0000;
-        }
-        .copyright {
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
 
- color: rgb(57, 55, 48); /* fill color */
-  text-shadow:
-    2px 0 0 #9f9c87,
-   -2px 0 0  #9f9c87,
-    0 2px 0 #9f9c87,
-    0 -2px 0  #9f9c87,
-    1.5px 1.5px 0 #9f9c87,
-   -1.5px 1.5px 0 #9f9c87,
-    1.5px -1.5px 0  #9f9c87,
-   -1.5px -1.5px 0 #9f9c87; 
-   
-   font-weight: 900;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.dancing-script {
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
 }
 
-        .Updatebox {
-            width: 140px;
-            height: 150px;
-            border: 1px solid #333;
-            padding: 10px;
-            overflow-y: scroll;
-            margin-left: 20px;
+.Updatebox {
+width: 140px;
+height: 150px;
+border: 1px solid #333;
+padding: 10px;
+overflow-y: scroll;
+margin-left: 20px;
 
-            /* thin scrollbar styling */
-            scrollbar-width: thin;
-            /* Firefox */
-            scrollbar-color: #555 #101010;
-            /* Firefox: thumb + track colors */
+/* thin scrollbar styling */
+scrollbar-width: thin;
+/* Firefox */
+scrollbar-color: #555 #101010;
+/* Firefox: thumb + track colors */
 
-        }
+}
+.tooltip {
+position: relative;
+display: inline-block;
+}
 
-        /* For WebKit browsers (Chrome, Edge, Safari) */
-        .Updatebox::-webkit-scrollbar {
-            width: 4px;
-            /* very thin scrollbar */
-        }
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: #2c282b;
+color: #c9ac6b;
+text-align: center;
+border-radius: 6px;
+font-family: cursive;
+padding: 4px 5px;
+position: absolute;
+z-index: 1;
+bottom: -50%; /* position above image */
+left: 50%;
+transform: translateX(-50%);
+font-size: 10px;
+white-space: nowrap;
+}
 
-        .Updatebox::-webkit-scrollbar-thumb {
-            background-color: #555;
-            /* scrollbar thumb color */
-            border-radius: 4px;
-            /* rounded edges */
-        }
+.tooltip:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}
+    .copyright {
 
-        .Updatebox::-webkit-scrollbar-track {
-            background: #1a1a1a;
-            /* track color */
-        }
+color: rgb(57, 55, 48); /* fill color */
+text-shadow:
+2px 0 0 #9f9c87,
+-2px 0 0  #9f9c87,
+0 2px 0 #9f9c87,
+0 -2px 0  #9f9c87,
+1.5px 1.5px 0 #9f9c87,
+-1.5px 1.5px 0 #9f9c87,
+1.5px -1.5px 0  #9f9c87,
+-1.5px -1.5px 0 #9f9c87; 
 
-        .hover-word:hover {
-            color: rgb(204, 208, 175);
-        }
+font-weight: 900;
+}
 
-        .hover-word {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            color: #c9ac6b;
-            text-decoration: none;
-            margin-left: 10px;
-        }
+/* For WebKit browsers (Chrome, Edge, Safari) */
+.Updatebox::-webkit-scrollbar {
+width: 4px;
+/* very thin scrollbar */
+}
 
-        /* Hide the star initially */
-        .hover-word .fa-star {
-            position: absolute;
-            top: -1em;
-            /* position star above */
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            color: #c9ac6b;
-            font-size: 0.8em;
-        }
+.Updatebox::-webkit-scrollbar-thumb {
+background-color: #555;
+/* scrollbar thumb color */
+border-radius: 4px;
+/* rounded edges */
+}
 
-        /* Show and slightly move the star up on hover */
-        .hover-word:hover .fa-star {
-            opacity: 1;
-            transform: translate(-50%, -3px);
-        }
+.Updatebox::-webkit-scrollbar-track {
+background: #1a1a1a;
+/* track color */
+}
 
-        a {
-            text-decoration: none;
-        }
+.hover-word:hover {
+color: rgb(204, 208, 175);
+}
 
-        body {
-            overflow-x: hidden;
-        }
+.hover-word {
+position: relative;
+display: inline-block;
+cursor: pointer;
+color: #c9ac6b;
+text-decoration: none;
+margin-left: 10px;
+}
 
-        .ppp {
-            color: rgb(215, 105, 171);
-            text-decoration: underline;
-        }
+/* Hide the star initially */
+.hover-word .fa-star {
+position: absolute;
+top: -1em;
+/* position star above */
+left: 50%;
+transform: translateX(-50%);
+opacity: 0;
+color: #c9ac6b;
+font-size: 0.8em;
+}
 
-        .special-elite-regular {
-            font-family: "Special Elite", system-ui;
-            font-weight: 400;
-            font-style: normal;
-        }
+/* Show and slightly move the star up on hover */
+.hover-word:hover .fa-star {
+opacity: 1;
+transform: translate(-50%, -3px);
+}
 
-        .lobster-regular {
-            font-family: "Lobster", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
+a {
+text-decoration: none;
+}
+
+body {
+overflow-x: hidden;
+}
+
+.ppp {
+color: rgb(215, 105, 171);
+text-decoration: underline;
+}
+
+.special-elite-regular {
+font-family: "Special Elite", system-ui;
+font-weight: 400;
+font-style: normal;
+}
+
+.lobster-regular {
+font-family: "Lobster", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+</style>
 
 </head>
 
 <body
-    style="background-attachment: fixed; background-image: url('websiteDec/backchrounds/background.png'); background-size:250px; color: #ffffff; margin: 0;">
+style="background-attachment: fixed; background-image: url('websiteDec/backchrounds/background.png'); background-size:250px; color: #ffffff; margin: 0;">
 
-    <center>
-
-
-    </center>
-    <!-- main content -->
-    <tbody>
-        <tr>
-            <td>
-                <table width="1040" cellspacing="15" cellpadding="0" border="0" align="center">
-                    <tbody>
-                        <tr>
+<center>
 
 
-                            <td valign="top" align="left">
+</center>
+<!-- main content -->
+<tbody>
+
+<center>
+
+
+</center>
+<!-- main content -->
+<tbody>
+<tr>
+<td>
+    <table width="1040" cellspacing="15" cellpadding="0" border="0" align="center">
+        <tbody>
+            <tr>
+
+
+                <td valign="top" align="left">
+                    <!-- start -->
+                    <table style="border-collapse: collapse; width: 100%;">
+                        <tbody>
+                            <tr>
                                 <!-- start -->
-                                <table style="border-collapse: collapse; width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <!-- start -->
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <div
-                                                style="background-image: url(websiteDec/backchrounds/background2.png);background-size: 50px; width: 100.3%; height: 120px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                                <br>
+                                <br>
+                                <br>
+                                <div
+                                    style="background-image: url(websiteDec/backchrounds/background2.png);background-size: 50px; width: 100.3%; height: 120px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
 
-                                                <div style="display: flex; justify-content: center;">
-                                                    <div style="margin-top: 50px;">
-                                                        <a href="about.html">
-                                                            <span class="hover-word lobster-regular">About <i
-                                                                    class="fa-solid fa-star"></i></span>
+                                    <div style="display: flex; justify-content: center;">
+                                        <div style="margin-top: 50px;">
+                                            <a href="about.html">
+                                                <span class="hover-word lobster-regular">About <i
+                                                        class="fa-solid fa-star"></i></span>
 
-                                                        </a>
-                                                        <a href="characters.html">
-                                                            <span class="hover-word lobster-regular">Characters <i
-                                                                    class="fa-solid fa-star"></i></span>
-                                                        </a>
-                                                    </div>
+                                            </a>
+                                            <a href="characters.html">
+                                                <span class="hover-word lobster-regular">Characters <i
+                                                        class="fa-solid fa-star"></i></span>
+                                            </a>
+                                        </div>
 
-                                                    <a href="index.html">
-                                                        <img style="margin-top: -70px;" height="170px"
-                                                            src="websiteDec/titles/mainheader.png" alt="">
-                                                    </a>
+                                        <a href="index.html">
+                                            <img style="margin-top: -70px;" height="170px"
+                                                src="websiteDec/titles/mainheader.png" alt="">
+                                        </a>
 
-                                                    <div style="margin-top: 50px;">
-                                                        <a href="Stories.html">
-                                                            <span class="hover-word lobster-regular">Stories <i
-                                                                    class="fa-solid fa-star"></i></span>
-                                                        </a>
-                                                        <a href="Portfolio.html">
-                                                            <span class="hover-word lobster-regular">Portfolio <i
-                                                                    class="fa-solid fa-star"></i></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div style="margin-top: 50px;">
+                                            <a href="Stories.html">
+                                                <span class="hover-word lobster-regular">Stories <i
+                                                        class="fa-solid fa-star"></i></span>
+                                            </a>
+                                            <a href="Portfolio.html">
+                                                <span class="hover-word lobster-regular">Portfolio <i
+                                                        class="fa-solid fa-star"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
 
-                                            <!-- Black box -->
-                                            <td valign="top" align="left"
-                                                style="background-image: url(websiteDec/backchrounds/sidebg.png); background-size: 300px; color:#EAE5D3; width: 10%; height: 100px; text-align: center; position: relative; top: -2px;">
+                               <!-- Black box -->
+                      <td valign="top" align="left"
+                        style="background-image: url(websiteDec/backchrounds/sidebg.png); background-size: 300px; color:#EAE5D3; width: 10%; height: 100px; text-align: center; position: relative; top: -2px;">
+
+                        <iframe style="width:190px; height: 880px;" src="sidebar.html" frameborder="0"></iframe>
 
 
 
-                                                <img height="200px" src="websiteDec/decorations/sidepic.png" alt="">
-
-                                                <a href=""><img height="70px"
-                                                        src="websiteDec/clickables/socials/update.png" alt=""></a>
-
-                                                <div class="Updatebox">
-
-                                                    <!-- start -->
-                                                     <!-- start -->
-                                                    <img src="gifs/new.gif" alt="">
-                                                    <small>Portraits:<br> 
-                                                        <img height="50px" src="Icons/namyo.png" alt="">
-                                                        <img height="50px" src="Icons/passion.png" alt="">
-                                                        <br>
-                                                        <img height="50px" src="Icons/allhail.png" alt="">
-                                                        <img height="50px" src="Icons/muertoz.png" alt="">
-                                                        <br>
-                                                        <img height="50px" src="Icons/avron.png" alt="">
-                                                        <br>
-                                                    </small>
-                                                    <br><br>
-
-                                                    <img src="gifs/new.gif" alt="">
-                                                    <small>Portraits:<br> wings added</small>
-                                                    <br><br>
-
-                                                    <!-- end -->
-
-                                                    <!-- end -->
-                                                     <!-- start -->
-                                                    <img src="gifs/new.gif" alt="">
-                                                    <small>Attic:<br> Updated</small>
-                                                    <br>
-                                                    <!-- end -->
-
-                                                </div>
-                                                <br>
- <a href="TheAttic.html"><img height="90px" src="websiteDec/clickables/socials/gravehouse.png" alt=""></a>
-                            <a href="https://aetheria.straw.page"><img height="120px" src="websiteDec/clickables/socials/strawpage.png" alt=""></a>
-
-                                                   <a href="https://x.com/Aetheria_world"><img height="120px"
-                                                        src="websiteDec/clickables/socials/twitter.png" alt=""></a>
-
-                                            </td>
-                                            <!-- end black -->
+                       
+                                                   
+                        
+                      </td>
+                      <!-- end black -->
 
 
 
+                                <td valign="top" align="left">
+                                    <!-- start -->
+                                    <table
+                                        style="border: #ffffff00 solid 15px; border-image: url('websiteDec/decorations/lace.png') 10  round; background-color: transparent; /* Ensure no white fill */ ;border-radius: 5px; "
+                                        width="900" height="900" cellspacing="5" cellpadding="0" border="0"
+                                        align="center">
 
 
+                                        <tbody
+                                            style="background: #EAE5D3; color: #19191D; width: 80%; height: 100px; outline: #EAE5D3 5px solid; ">
+
+                                            <tr>
+                                                <td style="text-align: left;" valign="top">
+                                                    <div>
+                                                        <!-- barlevel. here starts the content -->
+
+                                                        <div style="position: relative; top: -5px; ">
+                                                        
+                                                            <img height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+
+                                                            <img style="margin-left: -4px;" height="59px"
+                                                                src="websiteDec/decorations/lacetop.png"
+                                                                alt="">
+
+                                                        </div>
 
 
+                                                            <div style="display: flex; justify-content: center;">
 
-
-                                            <!-- Main box -->
-
-                                            <td
-                                                style="background: #EAE5D3; color: #19191D; width: 80%; height: 100px; outline: #EAE5D3 4px solid; border: 4px #333 dashed;">
-                                                <!-- content box -->
-
-                                                <div>
-                                                    <img style="position: relative; top: -2px;" height="72px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-                                                    <img style="margin-left: -4px;" height="73px"
-                                                        src="websiteDec/decorations/lacetop.png" alt="">
-
-                                                </div>
-
-
-                                                <!-- text -->
-                                                <div style="margin: auto; text-align: center;">
+                                                                <div> 
+                                                                    
+                                                                      <div style="margin: auto; text-align: center;">
+                                                    <!-- here -->
                                                     <br>
                                                     <br>
                                                     <small style="font-size: 20px; color: rgb(140, 114, 57);"
-                                                        class="dancing-script"> <b> <i class="fa-solid fa-dove"></i>
-                                                            About This Site</b></small>
+                                                        class="lobster-regular"><i class="fa-solid fa-dove"></i>
+                                                            About This Site</small>
                                                     <br>
                                                     <br>
                                                     <img height="50px" src="websiteDec/decorations/line.png" alt="">
@@ -308,8 +329,8 @@ background-color: yellow;        }
                                                     </div>
                                                     <div style=" width: 400px; margin: auto;">
                                                         <small
-                                                            style="color: #583611; font-size: 15px; font-family: cursive; "
-                                                            class="">
+                                                            style="color: #583611; font-size: 15px; ; "
+                                                            class="delius-regular">
                                                             <b>╰┈➤ Administrator:</b> Aethria_World/ Mal
                                                             <br>
                                                             <b>╰┈➤ Personal circle site:</b> https://aetheriaworld.github.io/Aetheria/about.html
@@ -319,13 +340,13 @@ background-color: yellow;        }
                                                     </div>
                                                     <br>
                                                     <br>
-                                                    <div style=" width: 200px; margin: auto;border: 2px solid #583611; padding: 10px; 
+                                                    <div style=" width: 220px; margin: auto;border: 2px solid #583611; padding: 15px; 
                                                     border-top-right-radius: 40px;
                                                     border-top-left-radius: 40px;
                                                     ">
                                                         <small
-                                                            style="color: #583611; font-size: 15px; font-family: cursive; font-size: 10px; "
-                                                            class="">
+                                                            style="color: #583611; font-size: 15px; font-family:  font-size: 10px; "
+                                                            class="delius-regular">
                                                             <b>Welcome to the world Aetheria</b>
                                                             <br>
                                                             a realm born from the remnants of humanity’s extinction.
@@ -351,8 +372,8 @@ background-color: yellow;        }
 
                                                     </div>
                                                     <small
-                                                        style="color: #583611; font-size: 15px; font-family: cursive; font-size: 10px; "
-                                                        class="">
+                                                        style="color: #583611; font-size: 15px;  font-size: 10px; "
+                                                        class="delius-regular">
 
 
                                                         <br>
@@ -384,144 +405,167 @@ background-color: yellow;        }
                                                 </div>
                                                 <!-- content end -->
 
+                      
+                                                                </div>
+                                                                 
 
 
 
 
+                                                                
+                                                                 <!-- end level -->
+
+                                                            </div>
+
+
+                                                            <section class="section">
+                                                                 <!-- start -->
 
 
 
+                                                              <!-- end -->
+                                                                       </section>            
 
-                                            </td>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
 
+                                                        <!-- end -->
+                                                            
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+            <div class="footer" style="text-align: center;">
+            <table width="400" cellspacing="0" cellpadding="0" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="footer">
+                                <p style="text-align: left;">
 
+                                            <span
+                                                style="color:#B0A798;"><b>
+                                                        <span class="copyright">© 2025 Aetheria. All rights reserved.  </span>
 
-                                            <!-- end white -->
+                                                    
+                                                    <img
+                                                        src="websiteDec/decorations/copyright.png"
+                                                        alt=""  height="150" /></b></span>
+                                </p>
+                            </div>
 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
 
-
-                                        </tr>
-
-                                    </tbody>
-                                    <!-- end -->
-                                </table>
-<div class="footer" style="text-align: center;">
-    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center">
-        <tbody>
-            <tr>
-                <td>
-                    <div class="footer">
-                        <p style="text-align: left;">
-
-                                    <span
-                                        style="color:#B0A798;"><b>
-                                             <span class="copyright">© 2025 Aetheria. All rights reserved.  </span>
-
-                                            
-                                            <img
-                                                src="websiteDec/decorations/copyright.png"
-                                                alt=""  height="150" /></b></span>
-                        </p>
-                    </div>
-
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-                                <!-- end -->
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
+                            <!-- endcontent -->
 
 
-    <!-- endcontent -->
+                            <script>
+                                function openTab(tabName) {
+                                    var i;
+                                    var tab = document.getElementById(tabName);
+                                    var otherContent = document.getElementsByClassName("tabcontent");
+                                    var defaultOpen = document.getElementById("defaultOpen");
+                                    var buttons = document.getElementsByClassName("tablinks");
+                                    for (i = 0; i < otherContent.length; i++) {
+                                        otherContent[i].style.display = "none";
+                                    }
+                                    for (i = 0; i < buttons.length; i++) {
+                                        buttons[i].classList.remove("active");
+                                    }
+                                    tab.style.display = "block";
+                                    event.currentTarget.className += " active";
+                                }
+                                document.getElementById("defaultOpen").click();
+
+                            </script>
 
 
 
+                            <script type="text/javascript">
+                                // <![CDATA[
+                                // Remove Bubble Cursor functionality
+                                // The rest of the script can remain unaffected
 
+                                function addLoadEvent(funky) {
+                                    var oldonload = window.onload;
+                                    if (typeof (oldonload) !== 'function') {
+                                        window.onload = funky;
+                                    } else {
+                                        window.onload = function () {
+                                            if (oldonload) oldonload();
+                                            funky();
+                                        };
+                                    }
+                                }
 
+                                addLoadEvent(function () {
+                                    set_scroll();
+                                    set_width();
+                                });
 
-    <script type="text/javascript">
-        // <![CDATA[
-        // Remove Bubble Cursor functionality
-        // The rest of the script can remain unaffected
+                                // Adjust window size and scrolling position
+                                window.onresize = set_width;
+                                window.onscroll = set_scroll;
 
-        function addLoadEvent(funky) {
-            var oldonload = window.onload;
-            if (typeof (oldonload) !== 'function') {
-                window.onload = funky;
-            } else {
-                window.onload = function () {
-                    if (oldonload) oldonload();
-                    funky();
-                };
-            }
-        }
+                                function set_width() {
+                                    var sw_min = 999999;
+                                    var sh_min = 999999;
+                                    if (document.documentElement && document.documentElement.clientWidth) {
+                                        if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+                                        if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+                                    }
+                                    if (typeof (self.innerWidth) === 'number' && self.innerWidth) {
+                                        if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+                                        if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+                                    }
+                                    if (document.body.clientWidth) {
+                                        if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
+                                        if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
+                                    }
+                                    if (sw_min === 999999 || sh_min === 999999) {
+                                        sw_min = 800;
+                                        sh_min = 600;
+                                    }
+                                    swide = sw_min;
+                                    shigh = sh_min;
+                                }
 
-        addLoadEvent(function () {
-            set_scroll();
-            set_width();
-        });
+                                function set_scroll() {
+                                    if (typeof (self.pageYOffset) === 'number') {
+                                        sdown = self.pageYOffset;
+                                        sleft = self.pageXOffset;
+                                    } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+                                        sdown = document.body.scrollTop;
+                                        sleft = document.body.scrollLeft;
+                                    } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                                        sleft = document.documentElement.scrollLeft;
+                                        sdown = document.documentElement.scrollTop;
+                                    } else {
+                                        sdown = 0;
+                                        sleft = 0;
+                                    }
+                                }
 
-        // Adjust window size and scrolling position
-        window.onresize = set_width;
-        window.onscroll = set_scroll;
+                                function createDiv(height, width) {
+                                    var div = document.createElement("div");
+                                    div.style.position = "absolute";
+                                    div.style.height = height;
+                                    div.style.width = width;
+                                    div.style.overflow = "hidden";
+                                    div.style.backgroundColor = "transparent";
+                                    return div;
+                                }
+                                // ]]>
+                            </script>
+            </body>
 
-        function set_width() {
-            var sw_min = 999999;
-            var sh_min = 999999;
-            if (document.documentElement && document.documentElement.clientWidth) {
-                if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
-                if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
-            }
-            if (typeof (self.innerWidth) === 'number' && self.innerWidth) {
-                if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
-                if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
-            }
-            if (document.body.clientWidth) {
-                if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
-                if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
-            }
-            if (sw_min === 999999 || sh_min === 999999) {
-                sw_min = 800;
-                sh_min = 600;
-            }
-            swide = sw_min;
-            shigh = sh_min;
-        }
-
-        function set_scroll() {
-            if (typeof (self.pageYOffset) === 'number') {
-                sdown = self.pageYOffset;
-                sleft = self.pageXOffset;
-            } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-                sdown = document.body.scrollTop;
-                sleft = document.body.scrollLeft;
-            } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-                sleft = document.documentElement.scrollLeft;
-                sdown = document.documentElement.scrollTop;
-            } else {
-                sdown = 0;
-                sleft = 0;
-            }
-        }
-
-        function createDiv(height, width) {
-            var div = document.createElement("div");
-            div.style.position = "absolute";
-            div.style.height = height;
-            div.style.width = width;
-            div.style.overflow = "hidden";
-            div.style.backgroundColor = "transparent";
-            return div;
-        }
-        // ]]>
-    </script>
-</body>
-
-</html>
+                                                                                                
